@@ -4,8 +4,5 @@ node_modules/
 # Ignore .cache folder
 .cache/
 
-# Ignore dist folder
-dist/
-
 # Ignore node_modules folder
 .env
