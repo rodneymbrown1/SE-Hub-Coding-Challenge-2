@@ -1,0 +1,29 @@
+{
+  "name": "se-hub-coding-challenge-02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./server.js",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "mongoose": "^8.0.3",
+    "parcel-bundler": "^1.12.5",
+    "path": "^0.12.7",
+    "process": "^0.11.10",
+    "socket.io": "^4.7.2",
+    "socket.io-client": "^4.7.2"
+  },
+  "source": "./src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "devDependencies": {
+    "parcel": "^2.10.3"
+  }
+}

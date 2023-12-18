@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>   
+</head>
+<!-- ====================================================================== -->
+<!-- Styles -->
+<style>
+    body {
+        
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(255, 255, 255);
+        margin:0 auto; 
+        justify-content: center;
+        
+    }
+
+    .data-container {
+      display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  align-content: start;
+  padding: 30px;
+  max-width: 600px;
+    }
+
+.data-container div {
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px; /* Change the padding as needed */
+  font-size: 20px; /* Change the text size as needed */
+}
+
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: auto;
+      align-content: center
+    }
+    .centerDiv {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: auto;
+  max-width: 600px;
+  align-content: start;
+  margin:0 auto;
+    }
+
+    .container:after {
+  display: block;
+  content: " placeholder ";
+  margin: 10px;
+  flex: 999 999 auto;
+}
+
+.tree-main {
+margin-left: 10px;
+margin-right: 10px;
+margin-top: 50px;
+background-color: rgb(242, 242, 242);
+flex: 0 0 auto;
+/* justify-content: center;
+align-items: center; */
+border-radius: 40px;
+/* align-content: center; */
+}
+
+.tree-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: start;
+  align-items: auto;
+  align-content: center
+}
+
+.tree-level {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 130px solid rgb(45, 97, 58);
+flex: 0 0 auto;
+}
+
+ user-input {
+
+  width: 10px;
+  margin:0 auto; 
+  justify-content: center;
+}
+.heroSection {
+
+    font-family: Arial, Helvetica, sans-serif;
+background-color: rgb(174, 197, 176);
+display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: start;
+  align-items: auto;
+  align-content: center
+}
+</style>
+<!-- ====================================================================== -->
+<!-- Body -->
+<body>
+    <div class="heroSection">
+        <h1 style="
+        margin:0 auto;
+        padding: 10px;
+        font-size: x-large;
+          color: rgb(0, 0, 0);
+             font-style: normal;
+              font-size: xx-large;">Hexy.js</h1>
+  <h3>Hexadecimal Color Library</h3>
+    </div>
+    <p style="  
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    Display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: start;
+  align-items: auto;
+  align-content: center">
+    Eli Lilly Software Engineering Hub</p>
+  <center><p>Coding Challenge #2</p></center>
+  <center><p>Rodney Marcelino Brown</p></center>
+<br/>
+<!-- ---------------------------------------------------------------------- -->
+<!-- Input Box -->
+    <center>
+    <input id="user-input" type="text" placeholder="add some text"
+    style="height: 60px; 
+    max-width: 600px; 
+    margin:0 auto;
+    justify-content: center;
+    margin-left: 10px; 
+    margin-right: 
+    10px; font-size:xx-large;"/>
+    <div id="ab1" value="nofile selected"></div> </center>
+<!-- ---------------------------------------------------------------------- -->
+<!-- Decrease/ Increase Buttons -->
+
+<!-- Tree Foreground Buttons -->
+<br/>
+<center><label></label>Tree Foreground</label></center>
+<div class="button-container">
+  <div>
+  <button id="down-button">Down</button>
+  <button id="up-button">Up</button>
+</div>
+</div>
+<br/>
+
+<!-- Tree Background Buttons -->
+<center><label></label>Tree Background</label></center>
+<div class="button-container">
+  <div>
+  <button id="down-button2">Down</button>
+  <button id="up-button2">Up</button>
+</div>
+</div>
+<!-- ---------------------------------------------------------------------- -->
+<!-- Christmas Tree -->
+
+<div class="tree-main" id="tree-main">
+  <div>
+<div class="tree-container">
+  <div class="tree-level" id="tree-level" style="margin-bottom: -40px;"></div>
+  <div class="tree-level" id="tree-level" style="margin-bottom: -30px;"></div>
+  <div class="tree-level" id="tree-level"></div>
+  </div></div>
+</div>
+<!-- ---------------------------------------------------------------------- -->
+<!-- Display Data-->
+  <div id="data-container" class="data-container"></div>
+  <!-- <div id="original-text"></div>
+  <div id="original-hex"></div>
+  <div id="original-output"></div>
+  <div id="c-ratio"></div> -->
+<!-- ---------------------------------------------------------------------- -->
+<!-- Scripts-->
+<script>
+  var socket = io.connect('http://localhost:3000');
+  </script>  
+<script src="./engine.js"></script>
+</body>
+</html>

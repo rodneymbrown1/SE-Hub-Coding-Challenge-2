@@ -1,0 +1,4 @@
+If the requirements for the letters and numbers array changes,
+incrase the offset functions max length then change the max length 
+parameters in the increase/decrase char functions.
+
