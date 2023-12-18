@@ -1,7 +1,7 @@
 var Hexy = require('./hexy');
 var Contrast_V2 = require('./contrastV2');
 // require('./htmlUtils');
-var { io } = require('socket.io-client');
+// var { io } = require('socket.io-client');
 // require("regenerator-runtime/runtime");
 require('dotenv').config();
 //============================================================
