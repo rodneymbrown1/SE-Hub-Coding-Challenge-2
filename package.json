@@ -2,7 +2,7 @@
   "name": "se-hub-coding-challenge-02",
   "version": "1.0.0",
   "description": "",
-  "main": "./server.js",
+  "main": "./src/index.html",
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
